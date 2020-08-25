@@ -9,6 +9,16 @@ WIDTH=78
 BACKTITLE="Choose Your Own DevOps"
 TITLE="The DevOps Simulator"
 
+
+function menu () {
+    dialog --backtitle "$BACKTITLE" \
+            --title "$TITLE" \
+            --menu "$MENU" \
+            $HEIGHT $WIDTH $CHOICE_HEIGHT \
+            "${OPTIONS[@]}" \
+            2>&1 >$TERMINAL
+}
+
 function intro () {
     dialog --clear \
     --backtitle "$BACKTITLE" \
@@ -98,10 +108,91 @@ right?" 0 0
 }
 
 
+function cloud () {
+    CHOICE_HEIGHT=7
+    MENU="Please select from one or more of the most popular cloud providers:"
+    OPTIONS=(1 "AWS"
+            2 "GCP"
+            3 "Azure"
+            4 "AliCloud"
+            5 "Oracle"
+            6 "IBM Cloud Services"
+            7 "Salesforce")
+
+    CLOUD=$(dialog --clear \
+            --backtitle "$BACKTITLE" \
+            --title "$TITLE" \
+            --menu "$MENU" \
+            $HEIGHT $WIDTH $CHOICE_HEIGHT \
+            "${OPTIONS[@]}" \
+            2>&1 >$TERMINAL)
+}
+
+function database () {
+    CHOICE_HEIGHT=10
+    MENU="Please select your primary datastore:"
+
+    OPTIONS=(1 "MySQL"
+            2 "MariaDB"
+            3 "PostgreSQL"
+            4 "Oracle DB"
+            5 "IBM DB2"
+            6 "Microsoft SQL Server"
+            7 "Cassandra"
+            8 "HBase"
+            9 "Redis"
+            10 "Elasticsearch")
+    DATABASE=$(dialog --clear \
+            --backtitle "$BACKTITLE" \
+            --title "$TITLE" \
+            --menu "$MENU" \
+            $HEIGHT $WIDTH $CHOICE_HEIGHT \
+            "${OPTIONS[@]}" \
+            2>&1 >$TERMINAL)
+}
+
+
+function language () {
+    CHOICE_HEIGHT=20
+    MENU="Please select your primary programming language:"
+
+    OPTIONS=(1 "Javascript"
+            2 "PHP"
+            3 "Ruby"
+            4 "Python"
+            5 "C#"
+            6 "C++"
+            7 "Java"
+            8 "R"
+            9 "Objective-C"
+            10 "Swift"
+            11 "Kotlin"
+            12 "Typescript"
+            13 "Go"
+            14 "Rust"
+            15 "Scala"
+            16 "Dart"
+            17 "Lua"
+            18 "Erlang"
+            19 "Perl"
+            20 "Haskell")
+    LANGUAGE=$(dialog --clear \
+            --backtitle "$BACKTITLE" \
+            --title "$TITLE" \
+            --menu "$MENU" \
+            $HEIGHT $WIDTH $CHOICE_HEIGHT \
+            "${OPTIONS[@]}" \
+            2>&1 >$TERMINAL)
+}
+
+
 function main () {
     intro 
     infra
     arch
+    cloud
+    language
+    database
     email_reply
     clear
 }
