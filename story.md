@@ -21,3 +21,12 @@ VP and a desktop support technician.
 Wasn't sure what you meant about "CI/CD" so I just wrote down
 what we used at my last place: Team Foundation Server - same thing,
 right?
+
+# The New VP
+The new VP has negotiated a fantastic deal with Oracle Cloud!
+Based on our current runway, they'd like you to switch from
+$CLOUD to Oracle Cloud by next week. 
+
+Don't worry about other deliverables, saving money is the most
+important thing right now. Anyway, should just be a couple of 
+days work - they're just clouds, right?

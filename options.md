@@ -78,8 +78,10 @@ IBM DB2
 Microsoft SQL Server
 Cassandra
 HBase
+Redis
+Elasticsearch
 
-## Main Programming Language
+## Programming Language(s)
 Javascript
 PHP
 Ruby
@@ -101,10 +103,28 @@ Erlang
 Perl/Raku
 Haskell
 
-# CI/CD Platform
+## CI/CD Platform
 Azure DevOps
 Jenkins
 CircleCI
 Travis
 GitLab
+
+## Cluster Tech
+VMware
+Citrix Xen
+Wildfly
+Kubernetes
+DCOS
+Windows Failover Clustering
+Hadoop
+HPC
+
+## Software Packaging
+FPM
+RPM
+Deb
+Docker
+Habitat
+
 
