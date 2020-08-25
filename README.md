@@ -4,8 +4,7 @@ decisions based on previous answers.
 
 ## Visual "Style"
 In the interest of simply getting the idea out there, but at the same time to put some constraints on something
-in the works for a few years, a TUI was chosen. The most common menu-driven config tool used across many 
-operating systems for years would suffice ([ncurses](https://invisible-island.net/ncurses/)). 
+in the works for a few years, a TUI was chosen.
 
 ![Question 1](choose_devops_q1.png)
 
@@ -17,4 +16,4 @@ shell version on Ubuntu:
 sudo apt install -y dialog
 ```
 
-> Note: Dialog is typically installed by default, though `xdialog`, `kdialog` and `gdialog` are also options. 
+> Note: Dialog is typically installed on most Linux distros by default, though `xdialog` and `kdialog` are also options. `gdialog` (Zenity) appears to be just different enough to not be usable without a port. On macOS, `brew install dialog` will suffice.
