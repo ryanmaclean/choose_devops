@@ -19,6 +19,7 @@ function menu () {
             2>&1 >$TERMINAL
 }
 
+
 function intro () {
     dialog --clear \
     --backtitle "$BACKTITLE" \
@@ -49,14 +50,7 @@ function infra () {
              4 "Multi-Cloud")
 
     INFRA=$(menu)
-    #INFRA=$(dialog --clear \
-    #                --backtitle "$BACKTITLE" \
-    #                --title "$TITLE" \
-    #                --menu "$MENU" \
-    #                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-    #                "${OPTIONS[@]}" \
-    #                2>&1 >$TERMINAL)
-
+    # Sample of choice to make after storing answer
     case $INFRA in
             1)
                 echo "You chose Option 1"
@@ -85,13 +79,6 @@ function arch () {
             5 "Power")
 
     ARCH=$(menu)
-    #ARCH=$(dialog --clear \
-    #        --backtitle "$BACKTITLE" \
-    #        --title "$TITLE" \
-    #        --menu "$MENU" \
-    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
-    #        "${OPTIONS[@]}" \
-    #        2>&1 >$TERMINAL)
 }
 
 
@@ -122,13 +109,6 @@ function cloud () {
             7 "Salesforce")
 
     CLOUD=$(menu)
-    #CLOUD=$(dialog --clear \
-    #        --backtitle "$BACKTITLE" \
-    #        --title "$TITLE" \
-    #        --menu "$MENU" \
-    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
-    #        "${OPTIONS[@]}" \
-    #        2>&1 >$TERMINAL)
 }
 
 function database () {
@@ -148,13 +128,6 @@ function database () {
             11 "Mongo")
 
     DATABASE=$(menu)
-    #DATABASE=$(dialog --clear \
-    #        --backtitle "$BACKTITLE" \
-    #        --title "$TITLE" \
-    #        --menu "$MENU" \
-    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
-    #        "${OPTIONS[@]}" \
-    #        2>&1 >$TERMINAL)
 }
 
 
@@ -182,14 +155,8 @@ function language () {
             18 "Erlang"
             19 "Perl"
             20 "Haskell")
+
     LANGUAGE=$(menu)
-    #LANGUAGE=$(dialog --clear \
-    #        --backtitle "$BACKTITLE" \
-    #        --title "$TITLE" \
-    #        --menu "$MENU" \
-    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
-    #        "${OPTIONS[@]}" \
-    #        2>&1 >$TERMINAL)
 }
 
 
