@@ -30,36 +30,36 @@ double what you were asking, so it's win-win, right?" 0 0
 
 
 function infra () {
-  CHOICE_HEIGHT=4
-  MENU="Choose one of the following paths for your infrastructure:"
+    CHOICE_HEIGHT=4
+    MENU="Choose one of the following paths for your infrastructure:"
 
-  OPTIONS=(1 "On-Prem"
-           2 "Cloud-Based"
-           3 "Hybrid Cloud"
-           4 "Multi-Cloud")
+    OPTIONS=(1 "On-Prem"
+             2 "Cloud-Based"
+             3 "Hybrid Cloud"
+             4 "Multi-Cloud")
 
-  INFRA=$(dialog --clear \
-                  --backtitle "$BACKTITLE" \
-                  --title "$TITLE" \
-                  --menu "$MENU" \
-                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                  "${OPTIONS[@]}" \
-                  2>&1 >$TERMINAL)
+    INFRA=$(dialog --clear \
+                    --backtitle "$BACKTITLE" \
+                    --title "$TITLE" \
+                    --menu "$MENU" \
+                    $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                    "${OPTIONS[@]}" \
+                    2>&1 >$TERMINAL)
 
-  case $INFRA in
-          1)
-              echo "You chose Option 1"
-              ;;
-          2)
-              echo "You chose Option 2"
-              ;;
-          3)
-              echo "You chose Option 3"
-              ;;
-	  4)
-	      echo "You chose Option 4"
-	      ;;
-  esac
+    case $INFRA in
+            1)
+                echo "You chose Option 1"
+                ;;
+            2)
+                echo "You chose Option 2"
+                ;;
+            3)
+                echo "You chose Option 3"
+                ;;
+	        4)
+	            echo "You chose Option 4"
+	            ;;
+    esac
 }
 
 
@@ -85,14 +85,16 @@ function arch () {
 
 function email_reply () {
     dialog --sleep 1 \
+    --backtitle "$BACKTITLE" \
+    --title "WELCOME EMAIL" "$@" \
     --title "Reply from Talent Development" "$@" \
-    --infobox "Hey thanks for getting back to us so quickly!
+    --msgbox "Hey thanks for getting back to us so quickly!
 I pushed out a job req. for another Lead to help you, one for a
 VP and a desktop support technician.
 
 Wasn't sure what you meant about \"CI/CD\" so I just wrote down
 what we used at my last place: Team Foundation Server - same thing,
-right?"
+right?" 0 0
 }
 
 
