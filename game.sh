@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Much of this below was initially adapted from an answer on an Ask Ubuntu question found here: 
+# https://askubuntu.com/questions/1705/how-can-i-create-a-select-menu-in-a-shell-script
+
 TERMINAL=$(tty)
 HEIGHT=15
 WIDTH=40
