@@ -5,7 +5,7 @@ decisions based on previous answers.
 ## Visual "Style"
 In the interest of simply getting the idea out there, but at the same time to put some constraints on something
 in the works for a few years, a TUI was chosen. The most common menu-driven config tool used across many 
-operating systems for years would suffice. 
+operating systems for years would suffice ([ncurses](https://invisible-island.net/ncurses/). 
 
 ![Question 1](choose_devops_q1.png)
 
