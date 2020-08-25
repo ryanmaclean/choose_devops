@@ -10,7 +10,7 @@ operating systems for years would suffice.
 ![Question 1](choose_devops_q1.png)
 
 ## Pre-Requisites
-The only thing you will need is a form of `dialog` installed. For example, the 
+The only thing you will need is a form of [`dialog`](https://invisible-island.net/dialog/dialog.html) installed. For example, the 
 shell version on Ubuntu:
 
 ```bash
