@@ -48,13 +48,14 @@ function infra () {
              3 "Hybrid Cloud"
              4 "Multi-Cloud")
 
-    INFRA=$(dialog --clear \
-                    --backtitle "$BACKTITLE" \
-                    --title "$TITLE" \
-                    --menu "$MENU" \
-                    $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                    "${OPTIONS[@]}" \
-                    2>&1 >$TERMINAL)
+    INFRA=$(menu)
+    #INFRA=$(dialog --clear \
+    #                --backtitle "$BACKTITLE" \
+    #                --title "$TITLE" \
+    #                --menu "$MENU" \
+    #                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+    #                "${OPTIONS[@]}" \
+    #                2>&1 >$TERMINAL)
 
     case $INFRA in
             1)
@@ -83,13 +84,14 @@ function arch () {
             4 "MIPS"
             5 "Power")
 
-    ARCH=$(dialog --clear \
-            --backtitle "$BACKTITLE" \
-            --title "$TITLE" \
-            --menu "$MENU" \
-            $HEIGHT $WIDTH $CHOICE_HEIGHT \
-            "${OPTIONS[@]}" \
-            2>&1 >$TERMINAL)
+    ARCH=$(menu)
+    #ARCH=$(dialog --clear \
+    #        --backtitle "$BACKTITLE" \
+    #        --title "$TITLE" \
+    #        --menu "$MENU" \
+    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
+    #        "${OPTIONS[@]}" \
+    #        2>&1 >$TERMINAL)
 }
 
 
@@ -119,17 +121,18 @@ function cloud () {
             6 "IBM Cloud Services"
             7 "Salesforce")
 
-    CLOUD=$(dialog --clear \
-            --backtitle "$BACKTITLE" \
-            --title "$TITLE" \
-            --menu "$MENU" \
-            $HEIGHT $WIDTH $CHOICE_HEIGHT \
-            "${OPTIONS[@]}" \
-            2>&1 >$TERMINAL)
+    CLOUD=$(menu)
+    #CLOUD=$(dialog --clear \
+    #        --backtitle "$BACKTITLE" \
+    #        --title "$TITLE" \
+    #        --menu "$MENU" \
+    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
+    #        "${OPTIONS[@]}" \
+    #        2>&1 >$TERMINAL)
 }
 
 function database () {
-    CHOICE_HEIGHT=10
+    CHOICE_HEIGHT=11
     MENU="Please select your primary datastore:"
 
     OPTIONS=(1 "MySQL"
@@ -141,14 +144,17 @@ function database () {
             7 "Cassandra"
             8 "HBase"
             9 "Redis"
-            10 "Elasticsearch")
-    DATABASE=$(dialog --clear \
-            --backtitle "$BACKTITLE" \
-            --title "$TITLE" \
-            --menu "$MENU" \
-            $HEIGHT $WIDTH $CHOICE_HEIGHT \
-            "${OPTIONS[@]}" \
-            2>&1 >$TERMINAL)
+            10 "Elasticsearch"
+            11 "Mongo")
+
+    DATABASE=$(menu)
+    #DATABASE=$(dialog --clear \
+    #        --backtitle "$BACKTITLE" \
+    #        --title "$TITLE" \
+    #        --menu "$MENU" \
+    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
+    #        "${OPTIONS[@]}" \
+    #        2>&1 >$TERMINAL)
 }
 
 
@@ -176,13 +182,14 @@ function language () {
             18 "Erlang"
             19 "Perl"
             20 "Haskell")
-    LANGUAGE=$(dialog --clear \
-            --backtitle "$BACKTITLE" \
-            --title "$TITLE" \
-            --menu "$MENU" \
-            $HEIGHT $WIDTH $CHOICE_HEIGHT \
-            "${OPTIONS[@]}" \
-            2>&1 >$TERMINAL)
+    LANGUAGE=$(menu)
+    #LANGUAGE=$(dialog --clear \
+    #        --backtitle "$BACKTITLE" \
+    #        --title "$TITLE" \
+    #        --menu "$MENU" \
+    #        $HEIGHT $WIDTH $CHOICE_HEIGHT \
+    #        "${OPTIONS[@]}" \
+    #        2>&1 >$TERMINAL)
 }
 
 

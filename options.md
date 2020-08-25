@@ -80,6 +80,7 @@ Cassandra
 HBase
 Redis
 Elasticsearch
+Mongo
 
 ## Programming Language(s)
 Javascript
