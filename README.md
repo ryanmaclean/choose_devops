@@ -17,3 +17,6 @@ sudo apt install -y dialog
 ```
 
 > Note: Dialog is typically installed on most Linux distros by default, though `xdialog` and `kdialog` are also options. `gdialog` (Zenity) appears to be just different enough to not be usable without a port. On macOS, `brew install dialog` will suffice.
+
+## Play
+To play the game: clone this repo, `cd choose_devops`, `./game.sh`
