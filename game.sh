@@ -21,6 +21,11 @@ function menu () {
 
 
 function intro () {
+    if ! command -v dialog &> /dev/null                                                             
+then                                                                                                
+        printf "\ndialog could not be found, please install.\nhttps://github.com/ryanmaclean/choose_devops#pre-requisites\n\n"
+        exit                                                                                        
+    fi
     dialog --clear \
     --backtitle "$BACKTITLE" \
     --title "WELCOME EMAIL" "$@" \
